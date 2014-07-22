@@ -1,0 +1,44 @@
+
+  <h2>{{page.title}}<br>{% include 'divider' %}</h2>
+    <!-- items -->
+    <div ng-controller="ModalCtrl">
+        <div gallery src="photos_public.gne?id=125473693@N07&tags=rs25espys"></div>
+    </div>
+    {% raw %}
+
+        <script type="text/ng-template" id="myModalContent.html">
+
+            <div class="modal-header">
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                <div class="col-sm-12 text-center">
+                <p class="lead"><button class="btn btn-danger pull-right" ng-click="cancel()">x</button></p>
+                <br>
+                </div>
+                <br>
+                    <div class="col-sm-12  text-center">
+
+                        <img ng-src="{{selected.image}}" alt="" class="img-responsive center-image">
+                        <br>
+                    </div>
+                    <br>
+                    <br>
+                    <div class="col-sm-12">
+                      <div class="row text-center">
+                          <h2 class="white"> Follow Me! </h2>
+                        <a href="{{facebookUrl}}" target="_blank"><i class="fa fa-facebook-square fa-5x color2"></i></a>
+                        <a href="{{twitterUrl}}" target="_blank"><i class="fa fa-twitter-square fa-5x color2"></i></a>
+                        <a href="{{instagramUrl}}" target="_blank"><i class="fa fa-instagram fa-5x color2"></i></a>
+                      </div>
+                      <div  class="disqus-gallery">
+                       <div disqus="id"></div>
+                      </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </script>
+</div>
+{% endraw %}
